@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <v-container>
     <h4 class="display-1 mt-3" style="text-align:center">Welcome to ChiroFit Roseville</h4>
     <h4 class="headline mb-3" style="text-align:center">Your Roseville Chiropractors</h4>
     <v-container>
@@ -9,14 +10,14 @@
     >Dr. Josh Reichardt and Dr. Jon McHale both grew up in the Roseville/Sacramento area. Both attended Sierra College in Rocklin and were classmates at Life Chiropractic College West in Hayward, CA. For two years following graduation, Dr. Reichardt and Dr. McHale have gained valuable experience and learned cutting edge techniques through school, and their year long internship in the Life West Health Center and from working alongside top Chiropractors for the past two years.</p>
     </v-container>
 
-    <v-container>
-      <v-carousel>
-        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+    <v-container style="max-width:1137px">
+      <v-carousel >
+        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" ></v-carousel-item>
       </v-carousel>
     </v-container>
     <h4 class="display-1 mb-3" style="text-align:center">What Makes Us Different</h4>
-
-    <v-layout row wrap>
+    <v-container>
+    <v-layout row wrap >
       <v-flex v-for="card in cards" :key="card.title" xs12 sm4>
         <v-container style="text-align: center">
           <v-card>
@@ -31,6 +32,8 @@
         </v-container>
       </v-flex>
     </v-layout>
+    </v-container>
+    </v-container>
   </div>
 </template>
 
